@@ -1,0 +1,116 @@
+
+
+body {
+  background: #40826D; /* Viridian green */
+  color: #22223b;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%) !important;
+  box-shadow: 0 2px 8px rgba(58, 134, 255, 0.1);
+}
+.navbar .navbar-brand, .navbar .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #ffbe0b !important;
+}
+
+.App-logo {
+  height: 48px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.card {
+  border-radius: 1rem;
+  border: none;
+  background: #f8f9fa;
+  box-shadow: 0 4px 24px rgba(131, 56, 236, 0.08);
+}
+
+.card-title {
+  color: #3a86ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+
+.btn, .btn-primary, .btn-success, .btn-warning, .btn-danger {
+  border-radius: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(58, 134, 255, 0.08);
+  background: #f8f9fa !important; /* Off-white background */
+  color: #800020 !important; /* Burgundy text */
+  border: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover, .btn-primary:hover, .btn-success:hover, .btn-warning:hover, .btn-danger:hover {
+  background: #e0e0e0 !important; /* Slightly darker off-white on hover */
+  color: #800020 !important;
+}
+
+
+/* Navigation links as off-white buttons with burgundy text */
+.navbar .nav-link {
+  color: #800020 !important;
+  background: #f8f9fa !important;
+  border-radius: 1.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  background: #e0e0e0 !important;
+  color: #800020 !important;
+}
+
+.table {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(58, 134, 255, 0.04);
+}
+.table thead {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e0eafc;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #ffd6e0;
+}
+
+a, .App-link {
+  color: #3a86ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #ff006e;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #8338ec;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Favicon and logo animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
