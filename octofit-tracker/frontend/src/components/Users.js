@@ -1,0 +1,46 @@
+import React, { useEffect, useState } from 'react';
+
+const Users = () => {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`;
+    console.log('Fetching Users from:', endpoint);
+    fetch(endpoint)
+      .then(res => res.json())
+      .then(data => {
+        const results = Array.isArray(data) ? data : data.results || [];
+        setUsers(results);
+        console.log('Fetched Users:', data);
+      })
+      .catch(err => console.error('Error fetching users:', err));
+  }, []);
+  return (
+    <div className="card shadow mb-4">
+      <div className="card-body">
+        <h2 className="card-title text-primary mb-4">Users</h2>
+        <div className="table-responsive">
+          <table className="table table-striped table-hover">
+            <thead className="table-dark">
+              <tr>
+                {users[0] && Object.keys(users[0]).map((key) => (
+                  <th key={key}>{key}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((user, idx) => (
+                <tr key={user.id || idx}>
+                  {Object.values(user).map((val, i) => (
+                    <td key={i}>{val}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Users;
